@@ -1,0 +1,480 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parkinsans:wght@300..800&display=swap');
+
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Adjusts size dynamically */
+}
+
+header.hero {
+    background: linear-gradient(to right, #263e63, #233c65);
+    color: white;
+    padding: 50px 5%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+header.hero .hero-content {
+    max-width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header.hero {
+        padding: 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header.hero {
+        padding: 30px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+  
+  
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures elements stack on smaller screens */
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.intro img {
+  width: 100%;
+  max-width: 600px; /* Prevents the image from getting too large */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Adds smooth corners */
+}
+
+.intro-part1 {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.intro-part1 h2 {
+  margin-bottom: 20px;
+  color: #22518d;
+  font-size: clamp(1.5rem, 3vw, 2rem); /* Scales dynamically */
+}
+
+.intro-part1 .p1 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.intro-part1 p {
+  color: #262d49;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .intro {
+      flex-direction: column; /* Stack image & text vertically */
+      text-align: center;
+  }
+
+  .intro img {
+      max-width: 90%;
+  }
+
+  .intro-part1 {
+      padding: 10px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro img {
+      max-width: 100%;
+  }
+
+  .intro-part1 h2 {
+      font-size: 1.4rem;
+  }
+
+  .intro-part1 p {
+      font-size: 0.95rem;
+  }
+}
+
+  
+.needs-part {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 5%;
+  background-color: #f8f9fa; /* Light background to contrast service boxes */
+}
+
+.needs-part h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #001f3f;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  max-width: 800px;
+  line-height: 1.4;
+}
+
+/* Services Grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Service Boxes */
+.service-box {
+  background-color: #001f3f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: white;
+}
+
+.service-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.service-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  background-color: #004080;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .needs-part h1 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+  }
+
+  .services {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .needs-part h1 {
+      font-size: 1.4rem;
+  }
+
+  .service-box {
+      padding: 1.2rem;
+  }
+
+  .service-box h3 {
+      font-size: 1.1rem;
+  }
+
+  .service-box p {
+      font-size: 0.95rem;
+  }
+}
+
+
+
+    .scarc {
+      color: #262d49;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap; /* Allows stacking on smaller screens */
+      text-align: center; /* Centers text on smaller screens */
+      padding: 20px;
+  }
+  
+  .content-scarc {
+      max-width: 600px;
+      padding: 20px;
+  }
+  
+  .content-scarc h3 {
+      color: #22518d;
+      margin-bottom: 7px;
+      font-size: clamp(1.4rem, 3vw, 1.8rem); /* Scales dynamically */
+  }
+  
+  .content-scarc p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+  }
+  
+  .scarc img {
+      width: 100%;
+      max-width: 600px; /* Prevents image from getting too large */
+      height: auto; /* Maintains aspect ratio */
+      border-radius: 8px; /* Optional: Adds smooth corners */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+      .scarc {
+          flex-direction: column; /* Stack content and image vertically */
+          text-align: center;
+      }
+  
+      .content-scarc {
+          padding: 10px 5%;
+      }
+  
+      .scarc img {
+          max-width: 90%;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .scarc img {
+          max-width: 100%;
+      }
+  
+      .content-scarc h3 {
+          font-size: 1.3rem;
+      }
+  
+      .content-scarc p {
+          font-size: 0.95rem;
+      }
+  }
+  
+
+  .maps .map-placeholder {
+    background: #e6f7ff;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #007acc;
+  }
+  
+  .cta-buttons button {
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cta-buttons button:hover {
+    background: #00509e;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #263e63, #233c65);
+    color: white;
+  }
+  .feat-cont {
+    text-align: center;
+    padding: 0 5%;
+}
+
+.feat-cont h2 {
+    color: #273361;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.feat-cont p {
+    color: #333;
+    padding: 0px 10%;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Feature Cards */
+.feat-card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures stacking on smaller screens */
+    text-align: center; /* Centers text on smaller screens */
+}
+
+.feat-card1 p {
+    line-height: 1.8rem;
+    color: #333;
+    font-size: 1rem;
+}
+
+.feat-card1 img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px; /* Optional: Smooth edges */
+}
+
+.para-card1 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.para-card1 h3 {
+    color: #001f3f;
+    margin-bottom: 20px;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+/* Buttons */
+.exp-btn button {
+    border: none;
+    background-color: #0eae16;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.exp-btn button a {
+    text-decoration: none;
+    color: white;
+}
+
+.exp-btn button:hover {
+    background-color: #0c9213;
+}
+
+/* Image Adjustments */
+.img-card2 img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.img-card3 img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-right: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .feat-cont p {
+        padding: 0 5%;
+    }
+
+    .feat-card1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .para-card1 {
+        padding: 0 5%;
+    }
+
+    .feat-card1 img {
+        max-width: 90%;
+    }
+
+    .img-card2 img,
+    .img-card3 img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .feat-cont h2 {
+        font-size: 1.6rem;
+    }
+
+    .feat-cont p {
+        font-size: 1rem;
+    }
+
+    .para-card1 h3 {
+        font-size: 1.4rem;
+    }
+
+    .feat-card1 p {
+        font-size: 0.95rem;
+        line-height: 1.6rem;
+    }
+
+    .exp-btn button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feat-cont h2 {
+        font-size: 1.4rem;
+    }
+
+    .feat-cont p {
+        font-size: 0.95rem;
+        padding: 0 5%;
+    }
+
+    .para-card1 h3 {
+        font-size: 1.3rem;
+    }
+
+    .feat-card1 p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+
+    .exp-btn button {
+        font-size: 0.85rem;
+        padding: 7px 14px;
+    }
+}
